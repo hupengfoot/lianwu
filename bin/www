@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+var fs = require('fs');
+var assert = require('assert');
+try{
+    fs.mkdirSync('logs');
+}catch(err){
+}
+global.port    = process.argv[2];
+
+var path = require('path');
+var app = require('../app');
+
+assert(global.port);
+
+app.set('port', global.port);
+var server = app.listen(app.get('port'), '', 4096, function() {
+    console.log('Express server listening on port ' + server.address().port);
+});
+
+server.on('clientError', function(exp, socket){
+    console.error('HTTP ERROR %s', JSON.stringify(exp));
+});
+
