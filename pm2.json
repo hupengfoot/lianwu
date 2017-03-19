@@ -4,7 +4,7 @@
         "args":["80"],
         "script"      : "bin/www",
         "max_restarts": 3,
-        "max_memory_restart" : "300",
+        "max_memory_restart" : "300M",
         "log_file"    : "./logs/www0.log",
         "out_file"    : "./logs/www0.out",
         "error_file"  : "./logs/www0.error"
