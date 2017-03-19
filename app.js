@@ -26,7 +26,7 @@ app.use(cookieParser("ZC_COOKIE_STR_AQC"));
 app.get('/', function(req, res){
     var param = url.parse(req.url, true).query;
     console.log(param);
-    res.jsonp(param.echostr);
+    res.send(param.echostr);
 });
 
 module.exports = app;
