@@ -23,6 +23,8 @@ app.use(bodyParser({limit : '1mb'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser("ZC_COOKIE_STR_AQC"));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function(req, res){
     var param = url.parse(req.url, true).query;
     console.log(param);
