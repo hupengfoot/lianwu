@@ -1,7 +1,7 @@
 #create database dbLianwu;
 
 create table IF NOT EXISTS tbTeacher(
-    iTID bigint unsigned default 0 comment '教师ID',
+    iTID bigint unsigned not null auto_increment comment '教师ID',
     szName varchar(256) default '' comment '教师名字',
     szHeadUrl varchar(1024) default '' comment '头像url',
     szSignature varchar(1024) default '' comment '个性签名',
@@ -17,7 +17,7 @@ create table IF NOT EXISTS tbTeacher(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 comment="教师表";
 
 create table IF NOT EXISTS tbSchool(
-    iSID bigint unsigned default 0 comment '学校ID',
+    iSID bigint unsigned not null auto_increment comment '学校ID',
     szName varchar(256) default '' comment '学校名字',
     szHeadUrl varchar(1024) default '' comment '学校头像',
     szContactsName varchar(256) default '' comment '联系人姓名',
