@@ -12,6 +12,7 @@ create table IF NOT EXISTS tbTeacher(
     szType varchar(1024) default '' comment '',
     szPhone varchar(256) default '' comment '联系电话',
     szFreeTime varchar(512) default '' comment '空闲时间',
+    dtRegisterTime datetime not null default '1970-01-01 00:00:00' comment '开始日期',
     primary key (`iTID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 comment="教师表";
 
@@ -27,4 +28,5 @@ create table IF NOT EXISTS tbSchool(
     szArea varchar(1024) default '' comment '学校地址',
     szType varchar(1024) default '' comment '舞种',
     szCourseTime varchar(1024) default '' comment '上课时间',
+    dtRegisterTime datetime not null default '1970-01-01 00:00:00' comment '开始日期',
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 comment="学校表";

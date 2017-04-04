@@ -1,0 +1,26 @@
+[
+    {
+        "szDbName" : 0,
+        "readDB":{
+            "szDbIP":"10.1.163.60",
+            "szDbPort":"3306",
+            "szDbUser":"root",
+            "szDbPwd":"123456",
+            "szDbDefaultDb":"dbFIFAShow"
+        },
+        "writeDB":{
+            "szDbIP":"10.1.163.60",
+            "szDbPort":"3306",
+            "szDbUser":"root",
+            "szDbPwd":"123456",
+            "szDbDefaultDb":"dbFIFAShow"
+        },
+        "slaveDB":{
+            "szDbIP":"10.1.163.60",
+            "szDbPort":"3306",
+            "szDbUser":"root",
+            "szDbPwd":"123456",
+            "szDbDefaultDb":"dbFIFAShow"
+        }
+    }
+]
