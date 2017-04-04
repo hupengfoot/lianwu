@@ -29,4 +29,5 @@ create table IF NOT EXISTS tbSchool(
     szType varchar(1024) default '' comment '舞种',
     szCourseTime varchar(1024) default '' comment '上课时间',
     dtRegisterTime datetime not null default '1970-01-01 00:00:00' comment '开始日期',
+    primary key (`iSID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 comment="学校表";
