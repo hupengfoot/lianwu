@@ -18,6 +18,15 @@ const user_query = [
 	},
 	access : 0,
     },
+    {
+	//查看教师
+	router : "/user/teacher/list",
+	params : {
+	    iPageSize : joi.number().integer().required(),
+	    iPageNum : joi.number().integer().required()
+	},
+	access : 0,
+    },
 ];
 
 module.exports = user_query;

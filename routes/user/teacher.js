@@ -13,4 +13,11 @@ router.get('/add', function(req, res){
     });
 });
 
+router.get('/list', function(req, res){
+    var param = url.parse(req.url, true).query;
+    teacherBiz.list(param.iPageSize, param.iPageNum, function(err, rows){
+	mag.wrapper(err, rows, res);
+    })
+});
+
 module.exports = router;

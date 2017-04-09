@@ -13,4 +13,10 @@ teacherBiz.add = function(szName, szHeadUrl, szSignature, szArea, iPrice, szType
     });
 };
 
+teacherBiz.list = function(iPageSize, iPageNum, cb){
+    var iStart = iPageNum * iPageSize;
+    var iEnd = iPageSize;
+    sqlPool.excute(1, [iStart, iEnd], cb);
+};
+
 module.exports = teacherBiz;
